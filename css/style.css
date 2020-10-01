@@ -1,0 +1,55 @@
+html {
+    min-height: 100%;
+    background-image: url(../Images/restImage.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+ }
+
+body{
+    background: none;
+    height: 100%;
+}
+
+.body{
+    background: none;
+    height: 100%;
+}
+
+.list {
+    background: rgb(223, 209, 209);
+}
+
+.nav-bar{
+    background-color: burlywood;
+    border-style: solid;
+    border-color: black;
+    margin-top: 30px;
+}
+
+.main {
+    background-color: burlywood;
+    border-style: solid;
+    border-color: black;
+    margin-top: 30px;  
+}
+
+.input {
+    background:rgb(214, 212, 199);
+    border-style: solid;
+    border-color: black;
+}
+
+.btn {
+    background-color: black;
+    color:gold;
+    border-color: goldenrod;
+
+}
+
+@media only screen and (max-width: 767px) {
+    html {
+       background-image: url(smaller-image.jpg);
+    }
+  }
+
