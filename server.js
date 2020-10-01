@@ -13,26 +13,12 @@ app.use(express.json());
 // =============================================================
 var tables = [
   {
-    routeName: "yoda",
-    name: "Yoda",
-    role: "Jedi Master",
-    age: 900,
-    forcePoints: 2000
+    tableNumber: "#1",
+    id: "id",
+    name: "name here",
+    email: "someone@email.com",
+    phone: 210-555-4321
   },
-//   {
-//     routeName: "darthmaul",
-//     name: "Darth Maul",
-//     role: "Sith Lord",
-//     age: 200,
-//     forcePoints: 1200
-//   },
-//   {
-//     routeName: "obiwankenobi",
-//     name: "Obi Wan Kenobi",
-//     role: "Jedi Master",
-//     age: 55,
-//     forcePoints: 1350
-//   }
 ];
 // Routes
 // =============================================================
