@@ -11,29 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Star Wars Characters (DATA)
 // =============================================================
-var tables = [
-  // {
-  //   routeName: "yoda",
-  //   name: "Yoda",
-  //   role: "Jedi Master",
-  //   age: 900,
-  //   forcePoints: 2000
-  // },
-//   {
-//     routeName: "darthmaul",
-//     name: "Darth Maul",
-//     role: "Sith Lord",
-//     age: 200,
-//     forcePoints: 1200
-//   },
-//   {
-//     routeName: "obiwankenobi",
-//     name: "Obi Wan Kenobi",
-//     role: "Jedi Master",
-//     age: 55,
-//     forcePoints: 1350
-//   }
-];
+var tables = [];
 // Routes
 // =============================================================
 // Basic route that sends the user first to the AJAX Page
