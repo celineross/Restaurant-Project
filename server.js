@@ -11,7 +11,38 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Star Wars Characters (DATA)
 // =============================================================
-var tables = [];
+var tables = [{
+  "customerName": "Drew",
+  "phoneNumber": "1111111111",
+  "customerEmail": "test@test.com",
+  "customerID": "1"
+  },
+  {
+  "customerName": "Kalena",
+  "phoneNumber": "2222222",
+  "customerEmail": "test2@test.com",
+  "customerID": "2"
+  },
+  {
+  "customerName": "Lisa",
+  "phoneNumber": "3333333333",
+  "customerEmail": "test3@test.com",
+  "customerID": "3"
+  },
+  {
+  "customerName": "Celine",
+  "phoneNumber": "44444444",
+  "customerEmail": "test4@test.com",
+  "customerID": "4"
+  },
+  {
+  "customerName": "Jeremey",
+  "phoneNumber": "5555555555",
+  "customerEmail": "test5@test.com",
+  "customerID": "5"
+  }];
+
+var reserve = [];
 // Routes
 // =============================================================
 // Basic route that sends the user first to the AJAX Page
@@ -32,16 +63,16 @@ app.get("/api/reserve", function(req, res) {
   return res.json(reserve);
 });
 // Displays a single character, or returns false
-app.get("/api/tables/:table", function(req, res) {
-  var chosen = req.params.tables;
-  console.log(chosen);
-  for (var i = 0; i < tables.length; i++) {
-    if (chosen === tables[i].routeName) {
-      return res.json(tables[i]);
-    }
-  }
-  return res.json(false);
-});
+// app.get("/api/tables/:table", function(req, res) {
+//   var chosen = req.params.tables;
+//   console.log(chosen);
+//   for (var i = 0; i < tables.length; i++) {
+//     if (chosen === tables[i].routeName) {
+//       return res.json(tables[i]);
+//     }
+//   }
+//   return res.json(false);
+// });
 // Create New Characters - takes in JSON input
 app.post("/api/tables", function(req, res) {
   // req.body hosts is equal to the JSON post sent from the user
@@ -51,7 +82,12 @@ app.post("/api/tables", function(req, res) {
   // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
   // newTable.routeName = newTable.name.replace(/\s+/g, "").toLowerCase();
   console.log(newTable);
-  tables.push(newTable);
+  console.log(tables.length)
+  if(tables.length < 5){
+    tables.push(newTable);
+  }else{
+    reserve.push(newTable)
+  }
   res.json(newTable);
 });
 // Starts the server to begin listening
