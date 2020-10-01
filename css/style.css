@@ -11,6 +11,15 @@ body{
     height: 100%;
 }
 
+.body{
+    background: none;
+    height: 100%;
+}
+
+.list {
+    background: rgb(223, 209, 209);
+}
+
 .nav-bar{
     background-color: burlywood;
     border-style: solid;
@@ -29,6 +38,13 @@ body{
     background:rgb(214, 212, 199);
     border-style: solid;
     border-color: black;
+}
+
+.btn {
+    background-color: black;
+    color:gold;
+    border-color: goldenrod;
+
 }
 
 @media only screen and (max-width: 767px) {
