@@ -12,13 +12,13 @@ app.use(express.json());
 // Star Wars Characters (DATA)
 // =============================================================
 var tables = [
-  {
-    routeName: "yoda",
-    name: "Yoda",
-    role: "Jedi Master",
-    age: 900,
-    forcePoints: 2000
-  },
+  // {
+  //   routeName: "yoda",
+  //   name: "Yoda",
+  //   role: "Jedi Master",
+  //   age: 900,
+  //   forcePoints: 2000
+  // },
 //   {
 //     routeName: "darthmaul",
 //     name: "Darth Maul",
@@ -71,9 +71,9 @@ app.post("/api/tables", function(req, res) {
   var newTable = req.body;
   // Using a RegEx Pattern to remove spaces from newCharacter
   // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
-  newTable.routeName = newTable.name.replace(/\s+/g, "").toLowerCase();
+  // newTable.routeName = newTable.name.replace(/\s+/g, "").toLowerCase();
   console.log(newTable);
-  characters.push(newTable);
+  tables.push(newTable);
   res.json(newTable);
 });
 // Starts the server to begin listening
